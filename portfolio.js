@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function goBack() {
-        window.location.href = "/main/index.html"; // Replace with the correct main page URL
+        window.location.href = "index.html"; // Replace with the correct main page URL
     }
     
 

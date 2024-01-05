@@ -33,90 +33,48 @@ header {
 }
 
 
+/* Add this CSS for responsive navigation menu */
 nav {
-    background-color: #00ff0d;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-    background-color: #eeeeee;
-    
-}
-/* Your existing styles */
-/* Your existing styles */
-
-/* Navigation Menu Styles */
-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
-    color: white;
     padding: 10px;
-    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav li {
+    margin: 0 10px;
 }
 
-/* Add these styles to your existing CSS */
-/* Add this CSS to adjust the mobile menu button */
-nav {
-    position: relative;
+nav a {
+    text-decoration: none;
+    color: white;
 }
 
-.menu-button {
-    display: none; /* Initially hide the menu button for larger screens */
-}
-
-/* Style the mobile menu button */
-.menu-button {
-    font-size: 1.5em;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-/* Media Query for showing the menu button on smaller screens */
-@media only screen and (max-width: 768px) {
-    .menu-button {
-        display: block; /* Show the menu button for smaller screens */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column-reverse;
+        align-items: flex-start;
     }
 
     nav ul {
-        display: none; /* Hide the menu for larger screens */
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #5c5b5b;
-        width: 100%;
+        flex-direction: column-reverse;
     }
 
-    nav ul.active {
-        display: block; /* Show the menu when the active class is present */
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 0;
-        padding: 10px;
+    nav li {
+        margin: 10px 0;
     }
 }
+
+
+/* Add additional styling as needed */
 
 
 

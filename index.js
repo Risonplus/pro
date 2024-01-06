@@ -57,11 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Add this JavaScript to toggle the mobile menu
+// Update your JavaScript function in index.js
 function toggleMenu() {
-    const navMenu = document.querySelector('nav ul');
-    navMenu.classList.toggle('active');
+    var nav = document.querySelector('nav ul');
+    if (nav.style.display === 'flex' || nav.style.display === '') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'flex';
+    }
 }
+
 
 // Add this JavaScript to close the menu when a menu item is clicked
 document.querySelectorAll('nav ul li a').forEach(item => {

@@ -3,117 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Graphic Design Business</title>
     <link rel="stylesheet" href="index.css">
+    <title> Digital Marketing Agency</title>
 </head>
 <body>
-<!-- Header Section -->
-<header>
-    <div class="logo-container">
-        <img src="rlogo.png" alt="Logo" class="logo">
-        <h1>Products</h1>
-    </div>
-  
 
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="portfolio.html" target="_blank">portfolio</a></li>
-
-            <li><a href="#services">Services</a></li>
-            <li><a href="about-us.html" target="_blank">About Us</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-
-<!-- Home Section -->
-<section id="home">
-    <div class="banner-container">
-        
-        <div class="banner-slides">
-            <img src="banner1.png" alt="Banner Image" class="banner-image active">
-            <img src="banner2.png" alt="Banner Image" class="banner-image">
-            <img src="banner3.png" alt="Banner Image" class="banner-image">
-            <img src="banner4.png" alt="Banner Image" class="banner-image">
-            <img src="banner5.png" alt="Banner Image" class="banner-image">
+    <header>
+        <div class="logo">
+            <img src="rlogo.png" alt="Agency Logo">
+            
         </div>
-        
-        <div class="slide-buttons">
-            <span class="slide-button" onclick="prevSlide()">&lt;</span>
-            <span class="slide-button" onclick="nextSlide()">&gt;</span>
-        </div>
-    </div>
-   
-</section>
-
-   
-</section>
-
-<!-- Services Section -->
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="service">
-        <h3>1.Static Website </h3>
-        <a href="/static website/website.html">Learn more</a>
-        
-    </div>
-    <div class="service">
-        <h3>2.Social Media Posts</h3>
-        <p>Engaging and visually appealing social media graphics tailored for your brand.</p>
-    </div>
-    <div class="service">
-        <h3>3.Business Cards</h3>
-        <p>Unique and professional business card designs that make a lasting impression.</p>
-    </div>
-    <div class="service">
-        <h3>4.Invitation Cards</h3>
-        <p>Custom invitation card designs for events, weddings, and special occasions.</p>
-    </div>
-    <div class="service">
-        <h3>5.Business logo </h3>
-        <p>Custom Business logo designs for your Business or social media account.</p>
-    </div>
-    <div class="service">
-        <h3>6.Others </h3>
-       
-    </div>
-</section>
-
-<!-- Responsive Back Button -->
-<button id="back-btn" onclick="goBack()">Back</button>
-
-
-
-
-<!-- Footer Section -->
-<footer>
-    <div class="footer-container">
-        <section id="contact"></section>
-        <div class="contact-us">
-            <h4>Contact Us</h4>
-            <p>Email: srgshophub@gmail.com</p>
-            <p>Phone: +919262621383</p>
-        </div>
-       
-        <div class="follow-us">
-            <h4>Follow Us</h4>
+        <nav>
             <ul>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
             </ul>
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+   
+
+    <section id="hero">
+        <h2>Welcome to Marketing Partner</h2>
+        <b><b><p>Unlock the power of digital marketing to grow your business.</p></b>
+        <a href="#services" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Your brief introduction goes here. Highlight your mission, values, and commitment to client success.</p>
+        <!-- Team Showcase -->
+        <div class="team-member">
+            <img src="founder.jpg" alt="Team Member 1">
+           <b><h3>Sonu Gupta</h3></b>
+            <p>CEO & Founder</p>
         </div>
-    </div>
-</footer>
+        <div class="team-member">
+            <img src="founder.jpg" alt="Team Member 2">
+            <b><h3>Sonu Gupta</h3></b>
+            <p>Marketing Strategist</p>
+        </div>
+        
+    </section>
 
+    <section id="services">
+        <h2>Our Services</h2>
+<!-- Showcase Core Services -->
+<div class="service">
+    <img src="seo.png" alt="SEO Icon">
+    <h3>Search Engine Optimization (SEO)</h3>
+    <p>Optimize your online presence for search engines and increase visibility.</p>
+</div>
 
-<script src="index.js"></script>
+<div class="service">
+    <img src="website.png" alt="Website Icon">
+    <h3>Website Development</h3>
+    <p>Create a professional and user-friendly website to showcase your brand.</p>
+</div>
 
+<div class="service">
+    <img src="graphic.png" alt="Graphics Icon">
+    <h3>Graphics Design</h3>
+    <p>Design eye-catching graphics and visuals to enhance your brand identity.</p>
+</div>
 
+<div class="service">
+    <img src="social.png" alt="Social Media Icon">
+    <h3>Social Media Marketing</h3>
+    <p>Engage and connect with your audience on popular social media platforms.</p>
+</div>
+
+        <!-- Add more services as needed -->
+    </section>
+<!-- Add more services as needed -->
+    <section id="portfolio">
+        <h2>Our Work</h2>
+        <!-- Showcase Portfolio or Case Studies -->
+        <div class="portfolio-item">
+            <img src="portfolio-item-1.jpg" alt="Portfolio Item 1">
+            <h3>Client Campaign XYZ</h3>
+            <p>See how we helped Client XYZ achieve a 200% increase in website traffic.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio-item-2.jpg" alt="Portfolio Item 2">
+            <h3>Client Campaign ABC</h3>
+            <p>Learn how we boosted conversions for Client ABC through targeted digital marketing strategies.</p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <p>Transparent pricing to fit your business needs. Contact us for a personalized quote.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <!-- Contact Form -->
+        <form id="contactForm" action="thank_you.html" method="post"></form>
+        <form id="contactForm" action="process_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+   
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <!-- Display Recent Blog Posts -->
+        <div class="blog-post">
+            <h3>Post Title 1</h3>
+            <p>Short description of the post. <a href="#">Read more</a></p>
+        </div>
+        <div class="blog-post">
+            <h3>Post Title 2</h3>
+            <p>Short description of the post. <a href="#">Read more</a></p>
+        </div>
+        <!-- Add more blog posts as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Digital Marketing Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

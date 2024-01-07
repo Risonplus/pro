@@ -1,299 +1,299 @@
-/* Updated index.css */
-
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff8f8;
 }
-
 
 
 header {
-    background-color: #0f0707;
-    color: rgb(255, 255, 255);
-    padding: 15px;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
     text-align: center;
 }
-
-
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Logo Styles */
 .logo {
-    max-width: 150px; /* Set the width of your logo */
-    position: absolute;
-    top: -20px;
-    left: 20%;
-    transform: translateX(-50%);
-}
-
-
-/* Add this CSS for responsive navigation menu */
-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px;
 }
 
+.logo img {
+    max-height: 150px; /* Adjust the max-height as per your design */
+    margin-right: 10px;
+}
+/* Existing CSS styles ... */
+
+/* Mobile Menu Styles */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+/* Navigation Styles */
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    margin: 10px;
-    padding: 10px;
 }
 
-nav li {
-    margin: 0 10px;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #fff;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column-reverse;
-        align-items: flex-start;
+/* Hamburger Icon Styles */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
     }
 
     nav ul {
-        flex-direction: column-reverse;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        background-color: rgba(4, 15, 80, 0.9); /* Transparent background color */
+        width: 50%;
+        height: auto;
     }
 
-    nav li {
-        margin: 10px 0;
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional Desktop Styles */
+@media only screen and (min-width: 769px) {
+    .mobile-menu-icon {
+        display: none; /* Hide the mobile menu button on desktop screens */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 0;
     }
 }
 
 
-/* Add additional styling as needed */
 
 
-
-/* Responsive Back Button Styles */
-#back-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #21ff04;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#back-btn:hover {
-    background-color: #555;
-}
-/* ..........................................................*/
-
-section {
+/* Hero Section */
+#hero {
+    background-color: #f0f0f0;
+    text-align: center;
     padding: 50px 20px;
 }
-
-.banner-container {
-    position: relative;
+/* Hero Section */
+#hero {
+    background-image: url('poster.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #f8f8f8;
     text-align: center;
-    overflow: hidden;
-    width: 100%;
+    padding: 50px 20px;
+    height: 100vh; /* Full height of the viewport */
 }
-
-.banner-slides {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-
-.banner-image {
+/* Example for Responsive Images */
+img {
     max-width: 100%;
     height: auto;
 }
 
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+
+#hero h2 {
+    color: #ffffff;
 }
 
-.banner-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.banner-text p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+#hero p {
+    color: #ffffff;
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #000000;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-right: 10px;
-}
-
-.slide-buttons {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.slide-button {
-    font-size: 24px;
-    color: rgb(254, 255, 234);
-    cursor: pointer;
-    margin: 0 10px;
+    margin-top: 20px;
 }
 
 
 
-
-/* Media Queries for Responsive Design */
-
-@media only screen and (max-width: 600px) {
-    .about-text {
-        max-width: 100%;
-    }
-
-    .banner-text h1 {
-        font-size: 2em;
-    }
-
-    .banner-text p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-    }
+/* Other Sections */
+section {
+    padding: 20px;
 }
 
-/* Services Section Styles */
-
-#services {
-    padding: 50px 20px;
+/* Team Showcase */
+.team-member {
     text-align: center;
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.team-member img {
+    width: 120px; /* Adjust the width as needed */
+    height: 120px; /* Adjust the height as needed */
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
+/* Service Showcase */
 .service {
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #050404;
-    border-radius: 8px;
-    background-color: #ffffff;
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-    
-}
-
-.service:hover {
-    transform: scale(1.05);
+    text-align: center;
 }
 
 .service img {
-    max-width: 50px;
-    height: auto;
+    width: 6000px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
 }
 
-.service h3 {
+
+/* Portfolio Showcase */
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+}
+
+/* Contact Form Styles */
+#contact {
+    background-color: #f8f8f8;
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
     color: #333;
-    margin-top: 10px;
 }
 
-.service p {
-    color: #666;
+#contactForm {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for Responsive Design */
-
-@media only screen and (max-width: 600px) {
-    .service {
-        width: 100%;
-        margin: 10px 0;
-    }
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
 }
 
-/* Footer Styles */
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 30px 20px;
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
-.contact-us,
-.follow-us {
-    flex: 1;
-    max-width: 200px;
+button:hover {
+    background-color: #45a049;
+}
+/* Blog Section */
+.blog-post {
     margin-bottom: 20px;
 }
-
-.contact-us h4,
-.follow-us h4 {
-    color: #ffcc00; /* Your brand color */
-    font-size: 1.2em;
-    margin-bottom: 10px;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.contact-us p {
-    color: #ddd;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
 
-.follow-us ul {
-    list-style: none;
-    padding: 0;
-}
-
-.follow-us a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.follow-us a:hover {
-    text-decoration: underline;
-}
-
-/* Media Queries for Responsive Design */
-
+/* Media Queries */
 @media only screen and (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
+    /* Adjustments for tablets and small desktops */
+    #hero {
+        padding: 40px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for mobile devices */
+    header {
+        padding: 10px 0;
+        
     }
 
-    .contact-us,
-    .follow-us {
-        max-width: 100%;
+    nav ul {
         text-align: center;
-        margin-bottom: 20px;
+        margin-top: 10px;
     }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .team-member img {
+        width: 80%;
+    }
+
+    .service img {
+        max-width: 80px;
+    }
+
+    .portfolio-item img {
+        max-width: 100%;
+    }
+   
+
+
 }

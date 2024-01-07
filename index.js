@@ -1,79 +1,24 @@
-let currentSlideIndex = 1;
+// Add any additional JavaScript code as needed
 
-function showSlide(index) {
-    const slides = document.querySelector('.banner-slides');
-    const slideWidth = document.querySelector('.banner-image').clientWidth;
+function validateForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
-    if (index > slides.children.length) {
-        currentSlideIndex = 1;
+    if (name === '' || email === '' || message === '') {
+        alert('All fields must be filled out');
+        return false;
     }
 
-    if (index < 1) {
-        currentSlideIndex = slides.children.length;
-    }
-
-    slides.style.transform = `translateX(${-slideWidth * (currentSlideIndex - 1)}px)`;
+    alert('Form submitted successfully!');
+    // You can add code here to submit the form data to your server
 }
 
-function nextSlide() {
-    showSlide(currentSlideIndex += 1);
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const navList = document.querySelector('nav ul');
 
-function prevSlide() {
-    showSlide(currentSlideIndex -= 1);
-}
-
-// Automatic slide change every 5 seconds
-setInterval(nextSlide, 5000);
-
-// Initial slide display
-showSlide(currentSlideIndex);
-
-
-
-// JavaScript for Responsive Back Button
-function goBack() {
-    window.history.back();
-}
-
-// Add any other JavaScript functionalities as needed
-// JavaScript for Responsive Back Button
-document.addEventListener("DOMContentLoaded", function () {
-    const backButton = document.getElementById("back-btn");
-
-    // Toggle back button visibility based on scroll position
-    window.addEventListener("scroll", function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backButton.style.display = "block";
-        } else {
-            backButton.style.display = "none";
-        }
-    });
-
-    // Scroll to top when the back button is clicked
-    backButton.addEventListener("click", function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    mobileMenuIcon.addEventListener('click', function () {
+        navList.classList.toggle('show');
     });
 });
-
-// Update your JavaScript function in index.js
-function toggleMenu() {
-    var nav = document.querySelector('nav ul');
-    if (nav.style.display === 'flex' || nav.style.display === '') {
-        nav.style.display = 'none';
-    } else {
-        nav.style.display = 'flex';
-    }
-}
-
-
-// Add this JavaScript to close the menu when a menu item is clicked
-document.querySelectorAll('nav ul li a').forEach(item => {
-    item.addEventListener('click', () => {
-        const navMenu = document.querySelector('nav ul');
-        navMenu.classList.remove('active');
-    });
-});
-
-

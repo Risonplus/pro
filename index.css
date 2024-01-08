@@ -164,8 +164,8 @@ section {
 
 .team-member img {
     width: 120px; /* Adjust the width as needed */
-    height: 120px; /* Adjust the height as needed */
-    border-radius: 50%;
+    height: 150px; /* Adjust the height as needed */
+    border-radius: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 

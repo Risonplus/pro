@@ -72,7 +72,7 @@ nav a {
         position: absolute;
         top: 30px;
         right: 0;
-        background-color: rgba(4, 15, 80, 0.9); /* Transparent background color */
+        background-color: rgba(0, 2, 15, 0.9); /* Transparent background color */
         width: 50%;
         height: auto;
     }
@@ -163,9 +163,9 @@ section {
 }
 
 .team-member img {
-    width: 120px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    border-radius: 100%;
+    width: 220px; /* Adjust the width as needed */
+    height: 260px; /* Adjust the height as needed */
+    border-radius: 50%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
@@ -175,8 +175,8 @@ section {
 }
 
 .service img {
-    width: 400px; /* Adjust the width as needed */
-    height: 250px; /* Adjust the height as needed */
+    width: 500px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
 }
 
 
@@ -245,14 +245,70 @@ button:hover {
 .blog-post {
     margin-bottom: 20px;
 }
-footer {
-    background-color: #333;
-    color: #fff;
+/* Add this style to separate blog section from the footer */
+#blog {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Change background color as needed */
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    background-color: #fff; /* Adjust background color as needed */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+    #blog {
+        padding: 20px;
+    }
+}
+
+
+/* Updated CSS for Footer */
+
+/* Footer Container */
+.footer {
+    padding: 20px;
+    background-color: #000; /* Black background color */
+    color: #fff; /* Text color */
+}
+
+/* Footer Contact */
+.footer-contact,
+.footer-social {
+    margin-bottom: 20px;
+}
+
+/* Footer Social */
+.footer-social ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social li {
+    margin-right: 10px;
+}
+
+.footer-social img {
+    max-width: 30px; /* Adjust the maximum width of social icons */
+}
+
+/* Footer Bottom */
+.footer-bottom {
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+    .footer-contact,
+    .footer-social,
+    .footer-bottom {
+        text-align: center;
+    }
 }
 
 

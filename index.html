@@ -106,20 +106,37 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <!-- Contact Form -->
-        <form id="contactForm" action="thank_you.html" method="post"></form>
-        <form id="contactForm" action="process_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-   
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-    
-            <button type="submit">Submit</button>
-        </form>
+        <!-- HTML -->
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="button" onclick="sendEmail()">Submit</button>
+</form>
+
+<!-- JavaScript -->
+<script>
+    function sendEmail() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const subject = 'New Contact Form Submission';
+        const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+        const mailtoLink = `mailto:sendmailsonugupta@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+    }
+</script>
+
+        
     </section>
     
     <section id="blog">

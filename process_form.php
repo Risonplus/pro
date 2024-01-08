@@ -15,4 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: thank_you.html");
     exit();
 }
+
+// Clear form fields after processing
+echo "<script>
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+      </script>";
 ?>

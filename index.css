@@ -265,14 +265,13 @@ button:hover {
     }
 }
 
-
 /* Updated CSS for Footer */
 
 /* Footer Container */
 .footer {
     padding: 20px;
     background-color: #000; /* Black background color */
-    color: #fff; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Footer Contact */
@@ -295,11 +294,14 @@ button:hover {
 
 .footer-social img {
     max-width: 30px; /* Adjust the maximum width of social icons */
+    border-radius: 50%; /* Add a circular border to social icons */
 }
 
 /* Footer Bottom */
 .footer-bottom {
     text-align: center;
+    font-size: 14px; /* Adjust the font size for better readability */
+    opacity: 0.8; /* Reduce opacity for a subtle look */
 }
 
 /* Responsive Styles */
@@ -309,7 +311,12 @@ button:hover {
     .footer-bottom {
         text-align: center;
     }
+
+    .footer-social li {
+        margin-right: 8px; /* Adjust spacing between social icons */
+    }
 }
+
 
 
 /* Media Queries */
